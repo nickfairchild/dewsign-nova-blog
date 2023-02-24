@@ -20,7 +20,7 @@
     "require": {
         "php": ">=7.0.0",
         "laravel/framework": ">=5.0.0",
-        "maxfactor/support": "^2.6.11",
+        "maxfactor/support": "dev-master",
         "benjaminhirsch/nova-slug-field": "^1.0",
         "dewsign/nova-repeater-blocks": "^1.8.4",
         "epartment/nova-dependency-container": "^1.1",
@@ -43,5 +43,11 @@
                 "Dewsign\\NovaBlog\\Providers\\AuthServiceProvider"
             ]
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/nickfairchild/dewsign-maxfactor-laravel-support.git"
+        }
+    ]
 }
