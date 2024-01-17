@@ -23,7 +23,7 @@ class BlogController extends Controller
     {
         $articles = app(config('novablog.models.article', Article::class))::published()->includeRepeaters()->active()
             ->has('categories')
-            ->orderBy('published_date', 'desc')
+            ->orderBy(config('novablog.orderBy', 'published_date'), config('novablog.orderDirection', 'desc'))
             ->paginate(config('novablog.pageSize', 12));
 
         $categories = app(config('novablog.models.category', Category::class))::has('articles')
@@ -58,7 +58,7 @@ class BlogController extends Controller
             ->articles()
             ->active()
             ->published()
-            ->orderBy('published_date', 'desc')
+            ->orderBy(config('novablog.orderBy', 'published_date'), config('novablog.orderDirection', 'desc'))
             ->paginate(config('novablog.pageSize', 12));
 
         return View::first([

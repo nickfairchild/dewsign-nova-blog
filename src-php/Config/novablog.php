@@ -2,6 +2,8 @@
 
 return [
     'pageSize' => 12,
+    'orderBy' => 'published_date',
+    'orderDirection' => 'desc',
     'repeaters' => [],
     'replaceRepeaters' => false,
     'models' => [
